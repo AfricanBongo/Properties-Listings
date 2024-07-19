@@ -5,6 +5,11 @@ interface Props {
     onTypeSelected: (value: string) => void;
 }
 
+/**
+ * A dropdown menu that displays property types available
+ * @param onTypeSelected - callback function when a property type is selected
+ * @constructor
+ */
 const PropertyTypesDropdown = ({onTypeSelected}: Props) => {
     return (
         <ul className="menu menu-horizontal p-0">

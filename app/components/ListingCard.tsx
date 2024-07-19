@@ -1,13 +1,19 @@
 import {ListingModel} from "@/app/model/ListingModel";
 import IconButton from "@/app/components/IconButton";
+import Link from "next/link";
 
 interface Props {
     listing: ListingModel;
 }
 
-
-const ListingCard = ({ listing }: Props) => {
-    return <div className="max-w-md m-0 flex flex-col bg-white rounded-2xl shadow-xl overflow-clip border-2 border-gray-200">
+/**
+ * Displays summarised details of a property listing on the home page of the website.
+ * @param listing The property listing to display.
+ * @constructor
+ */
+const ListingCard = ({listing}: Props) => {
+    return <div
+        className="max-w-md m-0 flex flex-col bg-white rounded-2xl shadow-xl overflow-clip border-2 border-gray-200">
 
         {/* ListingModel image */}
         <img src={listing.images[0].filePath} alt={listing.title}
@@ -31,9 +37,8 @@ const ListingCard = ({ listing }: Props) => {
         </div>
 
         <div className="divider m-0"/>
-        <div className="w-full px-4 pt-1 pb-3 space-y-1 flex flex-row justify-between">
+        <div className="w-full px-4 pt-1 pb-3 flex flex-row justify-between items-center space-y-1">
             <div className="flex flex-row space-x-2">
-
                 {/* WhatsApp Icon Button*/}
                 <IconButton>
                     <i className="bi bi-whatsapp text-red-400"></i>
@@ -50,9 +55,10 @@ const ListingCard = ({ listing }: Props) => {
                 </IconButton>
             </div>
 
-            <button className="btn btn-md btn-outline rounded-2xl border-red-400 text-red-400">
+            <Link href={`/listing/${listing.id}`}
+                  className="btn btn-md btn-outline rounded-2xl border-red-400 text-red-400">
                 Details
-            </button>
+            </Link>
         </div>
     </div>;
 }

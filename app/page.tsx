@@ -6,7 +6,7 @@ import NavHeader from "@/app/components/NavHeader";
 import PropertyTypesDropdown from "@/app/components/PropertyTypesDropdown";
 import ButtonsJoin from "@/app/components/ButtonsJoin";
 
-const Home = () => {
+const Home = async () => {
     const forSaleListings: ListingModel[] = await useListings("sale");
     const toRentListings: ListingModel[] = await useListings("rent");
 
@@ -19,7 +19,7 @@ const Home = () => {
         }}>
             <div className="hero-overlay bg-opacity-70 bg-black"/>
             <div className="hero-content w-full max-w-4xl flex-col">
-                <ButtonsJoin onSelected={(value) => console.log(value)}/>
+                <ButtonsJoin />
                 <div className="flex flex-row w-full h-24 px-3 py-5 bg-white rounded-lg gap-1">
                     <PropertyTypesDropdown onTypeSelected={(value) => console.log(value)}/>
                     <input type="text" placeholder="Suburb, City, Province, Country"
@@ -31,7 +31,7 @@ const Home = () => {
                 </div>
             </div>
         </div>
-        <div className="flex justify-center v-screen">
+        <div className="flex justify-center">
             <div className="w-full max-w-screen-xl py-8 px-12 space-y-6">
                 <h2 className="text-2xl font-medium">Properties for sale</h2>
                 <ListingsCarousel listings={forSaleListings}/>

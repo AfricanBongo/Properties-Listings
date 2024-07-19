@@ -4,6 +4,13 @@ interface Props {
     label: string,
     children: React.ReactNode
 }
+
+/**
+ * A dropdown menu for the navigation bar
+ * @param label - the label of the dropdown
+ * @param children - the React nodes that can be wrapped by the drop-down.
+ * @constructor
+ */
 const NavDropdown = ({label, children}: Props) => {
     return (
             <li>

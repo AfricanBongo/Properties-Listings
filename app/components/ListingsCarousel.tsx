@@ -1,8 +1,9 @@
 import React from 'react';
 import ListingCard from "@/app/components/ListingCard";
+import {ListingModel} from "@/app/model/ListingModel";
 
 interface Props {
-    listings: Listing[];
+    listings: ListingModel[];
 }
 
 /**

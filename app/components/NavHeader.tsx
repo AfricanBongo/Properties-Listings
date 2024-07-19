@@ -2,9 +2,13 @@ import React from 'react';
 import NavDropdown from "@/app/components/NavDropdown";
 import Link from "next/link";
 
+/**
+ * The navigation header component seen on all screens
+ * @constructor
+ */
 const NavHeader = () => {
     return (
-        <header className="navbar justify-center px-16 bg-white shadow-none overflow-x-clip">
+        <header className="navbar justify-center px-12 bg-gray-100 shadow-none overflow-x-clip">
             <div className="w-full max-w-screen-xl justify-between">
                 <h1 className="text-xl">
                     LOGO

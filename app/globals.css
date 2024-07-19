@@ -21,3 +21,24 @@
   border-color: rgb(220, 38, 38);
   color: white;
 }
+
+.flex-grow-3 {
+  flex-grow: 3;
+}
+
+.flex-grow-2 {
+  flex-grow: 2;
+}
+
+.flex-grow-4 {
+    flex-grow: 4;
+}
+
+.flex-grow-5 {
+    flex-grow: 5;
+}
+
+p {
+  margin-block-end: 0;
+  scroll-margin-block-start: 0;
+}
