@@ -21,7 +21,7 @@ const Page = async ({params}: {
                 <ListingPageTitle listing={listing}/>
                 <div className="w-full flex flex-wrap space-x-2">
                     <div className="min-w-56 flex flex-col flex-grow-5 space-y-2">
-                        <Image src={listing.images[0].filePath} alt={listing.title} className="w-full"/>
+                        <img src={listing.images[0].filePath} alt={listing.title}/>
                         <div className="w-full flex flex-col p-4 space-x-4 rounded-xl bg-white outline outline-1 outline-gray-300">
                             <p className="text-lg font-semibold">Description</p>
                             <p>{listing.description}</p>

@@ -17,7 +17,7 @@ const ListingCard = ({listing}: Props) => {
         className="max-w-md m-0 flex flex-col bg-white rounded-2xl shadow-xl overflow-clip border-2 border-gray-200">
 
         {/* ListingModel image */}
-        <Image src={listing.images[0].filePath} alt={listing.title}
+        <img src={listing.images[0].filePath} alt={listing.title}
              className="w-full h-64 object-cover"/>
         <div className="w-full px-4 py-4 space-y-2 leading-snug text-gray-600">
             {/* ListingModel type*/}
