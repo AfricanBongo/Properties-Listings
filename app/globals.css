@@ -6,3 +6,18 @@
   :root {
   }
 }
+
+.join .join-item:last-child:not(:first-child),
+.join *:last-child:not(:first-child) .join-item {
+  border-radius: 999px !important;
+}
+
+.join .join-item:first-child:not(:last-child), .join *:first-child:not(:last-child) .join-item {
+  border-radius: 999px !important;
+}
+
+.btn:is(input[type="checkbox"]:checked), .btn:is(input[type="radio"]:checked) {
+  background-color: rgb(220, 38, 38);
+  border-color: rgb(220, 38, 38);
+  color: white;
+}

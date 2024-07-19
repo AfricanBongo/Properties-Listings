@@ -1,29 +1,28 @@
-import {Listing} from "@/app/model/Listing";
-import WellRoundedButton from "@/app/components/IconButton";
+import {ListingModel} from "@/app/model/ListingModel";
+import IconButton from "@/app/components/IconButton";
 
 interface Props {
-    listing: Listing;
+    listing: ListingModel;
 }
 
 
 const ListingCard = ({ listing }: Props) => {
-    return <div className="max-w-96 m-0 flex flex-col rounded-2xl shadow-xl overflow-clip border-2 border-gray-200">
+    return <div className="max-w-md m-0 flex flex-col bg-white rounded-2xl shadow-xl overflow-clip border-2 border-gray-200">
 
-        {/* Listing image */}
+        {/* ListingModel image */}
         <img src={listing.images[0].filePath} alt={listing.title}
              className="w-full h-64 object-cover"/>
-
         <div className="w-full px-4 py-4 space-y-2 leading-snug text-gray-600">
-            {/* Listing type*/}
+            {/* ListingModel type*/}
             <p>{listing.type}</p>
 
-            {/* Listing title*/}
+            {/* ListingModel title*/}
             <p className="text-lg font-semibold leading-snug">{listing.title}</p>
 
-            {/* Listing address*/}
+            {/* ListingModel address*/}
             <p className="">{listing.address}</p>
 
-            {/* Listing amenities*/}
+            {/* ListingModel amenities*/}
             <div className="w-full flex flex-row space-x-4">
                 <p>{`Bed: ${listing.bedrooms}`}</p>
                 <p>{`Baths: ${listing.bathrooms}`}</p>
@@ -36,24 +35,24 @@ const ListingCard = ({ listing }: Props) => {
             <div className="flex flex-row space-x-2">
 
                 {/* WhatsApp Icon Button*/}
-                <WellRoundedButton>
+                <IconButton>
                     <i className="bi bi-whatsapp text-red-400"></i>
-                </WellRoundedButton>
+                </IconButton>
 
                 {/* Telephone Icon Button*/}
-                <WellRoundedButton>
+                <IconButton>
                     <i className="bi bi-telephone text-red-400"></i>
-                </WellRoundedButton>
+                </IconButton>
 
                 {/* Email Icon Button*/}
-                <WellRoundedButton>
+                <IconButton>
                     <i className="bi bi-at text-lg text-red-400"></i>
-                </WellRoundedButton>
+                </IconButton>
             </div>
 
-            <WellRoundedButton additionalClasses="px-4">
+            <button className="btn btn-md btn-outline rounded-2xl border-red-400 text-red-400">
                 Details
-            </WellRoundedButton>
+            </button>
         </div>
     </div>;
 }
