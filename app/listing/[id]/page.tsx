@@ -2,6 +2,7 @@ import React from 'react';
 import useListingDetails from "@/app/hooks/useListingDetails";
 import NavHeader from "@/app/components/NavHeader";
 import ListingPageTitle from "@/app/components/ListingPageTitle";
+import Image from "next/image";
 
 /**
  * A dynamically routed page that displays the details of a property listing.
@@ -20,7 +21,7 @@ const Page = async ({params}: {
                 <ListingPageTitle listing={listing}/>
                 <div className="w-full flex flex-wrap space-x-2">
                     <div className="min-w-56 flex flex-col flex-grow-5 space-y-2">
-                        <img src={listing.images[0].filePath} alt={listing.title} className="w-full"/>
+                        <Image src={listing.images[0].filePath} alt={listing.title} className="w-full"/>
                         <div className="w-full flex flex-col p-4 space-x-4 rounded-xl bg-white outline outline-1 outline-gray-300">
                             <p className="text-lg font-semibold">Description</p>
                             <p>{listing.description}</p>

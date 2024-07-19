@@ -1,6 +1,7 @@
 import {ListingModel} from "@/app/model/ListingModel";
 import IconButton from "@/app/components/IconButton";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Props {
     listing: ListingModel;
@@ -16,7 +17,7 @@ const ListingCard = ({listing}: Props) => {
         className="max-w-md m-0 flex flex-col bg-white rounded-2xl shadow-xl overflow-clip border-2 border-gray-200">
 
         {/* ListingModel image */}
-        <img src={listing.images[0].filePath} alt={listing.title}
+        <Image src={listing.images[0].filePath} alt={listing.title}
              className="w-full h-64 object-cover"/>
         <div className="w-full px-4 py-4 space-y-2 leading-snug text-gray-600">
             {/* ListingModel type*/}
